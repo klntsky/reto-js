@@ -1,0 +1,22 @@
+{
+  "name": "reto-js",
+  "version": "1.0.0",
+  "description": "Return from outer functions.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+      "goto", "return", "try", "catch", "exception"
+  ],
+  "author": "klntsky@openmailbox.org",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-mocha-test": "^0.13.2",
+    "mocha": "^3.2.0"
+  }
+}
