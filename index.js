@@ -8,9 +8,6 @@ module.exports = { $label: $label,
 const wrong_args = "reto.js: wrong arguments for ";
 
 // $label is used to mark a given function with a text string.
-// If no_called with one argument (which must be a function), no label is attached,
-// so you can $return from the function only using `$return` no_called with number
-// as it's first argument or by using `return` JS keyword.
 function $label () {
 
     var label, fun, no_call;
@@ -54,10 +51,6 @@ function $label () {
     };
 
     return no_call ? ret : ret();
-}
-
-function $wrap (label, fun) {
-
 }
 
 function $return (fst, snd) {

@@ -10,7 +10,7 @@ describe('test1', () => {
     it('passed', () => {
 
         // [[function, result | undefined]]
-        // undefined result means 'must throw an error'
+        // null result means 'must throw an error'
         var tests = [
             [() => {
                 var r = $label("foo", () => {
@@ -212,9 +212,6 @@ describe('test1', () => {
                 });
             }, "baz"],
 
-
-
-
             // code from README
 
             [() => {
@@ -259,7 +256,7 @@ describe('test1', () => {
                 return 1;
             }, 1],
 
-            ];
+        ];
 
         for (var [fun, res] of tests) {
             if (res !== null) {
@@ -269,7 +266,6 @@ describe('test1', () => {
                 console.log('passed:', fun, 'throws');
                 assert.throws(fun);
             }
-
         }
     });
 });
