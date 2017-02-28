@@ -62,11 +62,12 @@ function $return (fst, snd) {
         to = 1; value = fst;
     }
 
-    if (!['string', 'number'].includes(typeof to))
-        throw wrong_args + '$return';
-
-    // Only natural numbers are allowed.
-    if (typeof to == 'number' && (to % 1 !== 0 || to < 1)) {
+    if (typeof to === 'number') {
+        // Only natural numbers are allowed.
+        if (to % 1 !== 0 || to < 1) {
+            throw wrong_args + '$return';
+        }
+    } else if (typeof to !== 'string') {
         throw wrong_args + '$return';
     }
 

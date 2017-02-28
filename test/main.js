@@ -256,6 +256,42 @@ describe('test1', () => {
                 return 1;
             }, 1],
 
+            // return `undefined` literally
+            [() => {
+                var tmp = $label('foo', () => {
+                    $return('foo', undefined);
+                });
+                return tmp;
+            }, undefined],
+
+            // $return: number as argument
+            [() => {
+                var tmp = $label(() => {
+                    $return(1.0, 'value'); // 1.0 is still correct
+                });
+                return tmp;
+            }, 'value'],
+
+            [() => {
+                var tmp = $label(() => {
+                    $return(1.1, 'value'); // must throw: 1.1 is not a natural
+                });
+                return tmp;
+            }, null],
+
+            [() => {
+                var tmp = $label(() => {
+                    $return(-1, 'value'); // must throw: number is <= 0
+                });
+                return tmp;
+            }, null],
+
+            [() => {
+                var tmp = $label(() => {
+                    $return(0, 'value'); // must throw: number is <= 0
+                });
+                return tmp;
+            }, null],
         ];
 
         for (var [fun, res] of tests) {
