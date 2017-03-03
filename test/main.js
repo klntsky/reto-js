@@ -292,6 +292,14 @@ describe('test1', () => {
                 });
                 return tmp;
             }, null],
+
+            [() => {
+                try {
+                    $return('foo', '1');
+                } catch (e) {
+                    return e + '';
+                }
+            }, "This exception was thrown by reto-js library. Maybe you forgot to add a $label() or use $rethrow() in a catch block? Check out the README for more info."]
         ];
 
         for (var [fun, res] of tests) {

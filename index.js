@@ -71,8 +71,10 @@ function $return (fst, snd) {
         throw wrong_args + '$return';
     }
 
-    throw { __RETO_TO__: to,
-            __RETO_VALUE__: value };
+    var exc = { __RETO_TO__: to,
+                __RETO_VALUE__: value };
+    exc.toString = () => "This exception was thrown by reto-js library. Maybe you forgot to add a $label() or use $rethrow() in a catch block? Check out the README for more info.";
+    throw exc;
 }
 
 function $rethrow (e) {
