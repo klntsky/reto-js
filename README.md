@@ -78,7 +78,7 @@ The above example outputs `'some-value'` as expected.
 
 ## $label
 
-Used to mark given function with label. Order of the arguments is completely ignored. `string` argument defines label value and `bool` argument determines if the wrapped function will be returned (`true`) or will it be called immedeately (`false`, default behavior).
+Used to mark given function with label. Order of the arguments is completely ignored. `string` argument defines label value and `bool` argument determines if the wrapped function will be returned (`true`) or will it be called immediately (`false`, default behavior).
 
 ## $return
 
