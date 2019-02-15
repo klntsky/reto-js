@@ -41,15 +41,15 @@ describe('test1', () => {
             [() => $label(() => {
                 $label(() => {
                     $return(2, 3);
-                })
+                });
             }), 3],
 
             [() => $label(() => {
                 $label(() => {
                     $label(() => {
                         $return(3, 4);
-                    })
-                })
+                    });
+                });
             }), 4],
 
             [() => $label(() => {
@@ -57,9 +57,9 @@ describe('test1', () => {
                     $label(() => {
                         $label(() => {
                             $return(4, 5);
-                        })
-                    })
-                })
+                        });
+                    });
+                });
             }), 5],
 
             [() => $label(() => {
@@ -68,10 +68,10 @@ describe('test1', () => {
                         $label(() => {
                             $label(() => {
                                 $return(5, 6);
-                            })
-                        })
-                    })
-                })
+                            });
+                        });
+                    });
+                });
             }), 6],
 
             // $return - labeled functions
@@ -101,10 +101,10 @@ describe('test1', () => {
                         $label('d', () => {
                             $label('e', () => {
                                 $return('b', 8);
-                            })
-                        })
-                    })
-                })
+                            });
+                        });
+                    });
+                });
             }), 8],
 
             [() => $label('a', () => {
@@ -131,9 +131,9 @@ describe('test1', () => {
                         $label('d', () => {
                             $label('e', () => {
                                 $return('b', 9);
-                            })
-                        })
-                    })
+                            });
+                        });
+                    });
                 }));
             }), 9],
 
@@ -299,7 +299,7 @@ describe('test1', () => {
                 } catch (e) {
                     return e + '';
                 }
-            }, "This exception was thrown by reto-js library. Maybe you forgot to add a $label() or use $rethrow() in a catch block? Check out the README for more info."]
+            }, "This exception was thrown by reto-js library. Maybe you forgot to add a $label() or use $rethrow() in a catch block? Check out README for more info."]
         ];
 
         for (var [fun, res] of tests) {

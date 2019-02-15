@@ -1,4 +1,9 @@
+# reto-js
+![](https://img.shields.io/bundlephobia/min/reto-js.svg)
+[![](https://img.shields.io/npm/v/reto-js.svg)](https://www.npmjs.com/package/reto-js)
+
 # Usage
+
 
 ```javascript
 (() => {
