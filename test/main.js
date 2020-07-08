@@ -1,10 +1,7 @@
-var assert = require('assert');
-var util = require('util');
+const assert = require('assert');
+const util = require('util');
 
-var t = require('../index.js');
-$label = t.$label;
-$return = t.$return;
-$rethrow = t.$rethrow;
+const { $label, $return, $rethrow } = require('../index.js');
 
 describe('test1', () => {
     it('passed', () => {

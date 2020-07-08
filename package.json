@@ -19,8 +19,8 @@
   "author": "klntsky@openmailbox.org",
   "license": "MIT",
   "devDependencies": {
-    "grunt": "^1.0.2",
-    "grunt-mocha-test": "^0.13.2",
-    "mocha": "^5.2.0"
+    "grunt": "^1.2.1",
+    "grunt-mocha-test": "^0.13.3",
+    "mocha": "^8.0.1"
   }
 }
